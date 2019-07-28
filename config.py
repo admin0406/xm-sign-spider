@@ -1,9 +1,10 @@
 # *--conding:utf-8--*
 import os
-API_TOKEN = '837140525:AAERnzRfG9-Th1kz-3dsYaQ40cMXb5c8crQ'
-AUTO_PATH = os.path.abspath(os.path.join(os.getcwd(),'../Auto_Test/'))
+API_TOKEN = '938619629:AAF3aR9AQniQzHJSb3PJChocfBnlKMLQiqs'
+black_path = 'black_path'
+admin_path = 'admin_list'
+address_path = 'address'
 
-WORK_PATH = os.path.join(AUTO_PATH,'main')
 # 日志配置
 
 LOG = {
@@ -26,13 +27,3 @@ URL = {
     'weather_url': 'http://www.mxnzp.com/api/weather/current/深圳市'
 }
 
-# 测试用例结果路径
-TEST_CASE = {'case_result_file_path':os.path.join(AUTO_PATH,'report'),
-             'case_result_file_name': 'api_report.html'
-             }
-
-CHECK_ORDER = {'log_path': os.path.join(AUTO_PATH,'..'),
-               'log_name': '拉取注单.log'}
-
-# 写入参数的文件路径
-ENV_FILE_PATH = os.path.join(AUTO_PATH,'env_file')

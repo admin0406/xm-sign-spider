@@ -350,3 +350,201 @@
 2019-07-26 14:51:32,832 -- telegram_bot.log -- main.py -- 235 -- ERROR -- Sample larger than population or is negative
 2019-07-26 14:51:52,678 -- telegram_bot.log -- main.py -- 221 -- INFO -- {'type': 'private', 'last_name': 'bibo', 'first_name': 'bibo', 'username': 'bibo_dear', 'id': 631099108, 'title': None, 'all_members_are_administrators': None, 'photo': None, 'description': None, 'invite_link': None, 'pinned_message': None, 'sticker_set_name': None, 'can_set_sticker_set': None}
 2019-07-26 14:52:07,324 -- telegram_bot.log -- main.py -- 221 -- INFO -- {'type': 'supergroup', 'last_name': None, 'first_name': None, 'username': 'software_tester', 'id': -1001406694070, 'title': '软件测试 test QA', 'all_members_are_administrators': None, 'photo': None, 'description': None, 'invite_link': None, 'pinned_message': None, 'sticker_set_name': None, 'can_set_sticker_set': None}
+2019-07-26 15:30:28,859 -- telegram_bot.log -- main.py -- 46 -- INFO -- [<telebot.types.User object at 0x0000011D310F3240>]
+2019-07-26 15:30:35,040 -- telegram_bot.log -- main.py -- 68 -- ERROR -- 'list' object has no attribute 'id'
+2019-07-26 15:33:52,908 -- telegram_bot.log -- main.py -- 47 -- INFO -- [<telebot.types.User object at 0x0000022328B047F0>]
+2019-07-26 15:33:55,093 -- telegram_bot.log -- main.py -- 70 -- ERROR -- 'list' object has no attribute 'id'
+2019-07-26 15:35:53,242 -- telegram_bot.log -- main.py -- 46 -- INFO -- [<telebot.types.User object at 0x000002744CBAA9E8>]
+2019-07-26 15:35:54,071 -- telegram_bot.log -- main.py -- 69 -- ERROR -- 'list' object has no attribute 'id'
+2019-07-26 15:38:07,503 -- telegram_bot.log -- main.py -- 47 -- INFO -- [<telebot.types.User object at 0x000002AF50F03518>]
+2019-07-26 15:38:08,317 -- telegram_bot.log -- main.py -- 70 -- ERROR -- 'list' object has no attribute 'id'
+2019-07-26 15:39:06,148 -- telegram_bot.log -- main.py -- 47 -- INFO -- [<telebot.types.User object at 0x000002643FB9A470>]
+2019-07-26 15:39:09,708 -- telegram_bot.log -- main.py -- 70 -- ERROR -- 'list' object has no attribute 'id'
+2019-07-26 15:40:25,730 -- telegram_bot.log -- main.py -- 47 -- INFO -- [<telebot.types.User object at 0x0000012DCA7BA4E0>]
+2019-07-26 15:40:26,544 -- telegram_bot.log -- main.py -- 70 -- ERROR -- 'list' object has no attribute 'id'
+2019-07-26 15:45:33,876 -- telegram_bot.log -- main.py -- 47 -- INFO -- [<telebot.types.User object at 0x00000281D500D9E8>]
+2019-07-26 15:45:37,578 -- telegram_bot.log -- main.py -- 70 -- ERROR -- 'list' object has no attribute 'id'
+2019-07-26 15:47:09,474 -- telegram_bot.log -- main.py -- 47 -- INFO -- [<telebot.types.User object at 0x000001BF0B8DA5F8>]
+2019-07-26 15:50:12,311 -- telegram_bot.log -- main.py -- 77 -- INFO -- {'id': 631099108, 'is_bot': False, 'first_name': 'bibo', 'username': 'bibo_dear', 'last_name': 'bibo', 'language_code': 'zh-hans'}
+2019-07-26 15:50:12,311 -- telegram_bot.log -- main.py -- 78 -- INFO -- 天气状况
+2019-07-26 15:50:18,626 -- telegram_bot.log -- main.py -- 99 -- INFO -- 讲段子
+2019-07-26 15:50:31,998 -- telegram_bot.log -- main.py -- 112 -- INFO -- /my_id@Bibo_dear2_bot
+2019-07-26 15:51:05,665 -- telegram_bot.log -- main.py -- 268 -- INFO -- {'type': 'group', 'last_name': None, 'first_name': None, 'username': None, 'id': -362842147, 'title': 'dsfjkj', 'all_members_are_administrators': False, 'photo': None, 'description': None, 'invite_link': None, 'pinned_message': None, 'sticker_set_name': None, 'can_set_sticker_set': None}
+2019-07-26 15:51:12,843 -- telegram_bot.log -- main.py -- 290 -- INFO -- {'type': 'group', 'last_name': None, 'first_name': None, 'username': None, 'id': -362842147, 'title': 'dsfjkj', 'all_members_are_administrators': False, 'photo': None, 'description': None, 'invite_link': None, 'pinned_message': None, 'sticker_set_name': None, 'can_set_sticker_set': None}
+2019-07-26 15:51:21,799 -- telegram_bot.log -- main.py -- 164 -- INFO -- {'type': 'group', 'last_name': None, 'first_name': None, 'username': None, 'id': -362842147, 'title': 'dsfjkj', 'all_members_are_administrators': False, 'photo': None, 'description': None, 'invite_link': None, 'pinned_message': None, 'sticker_set_name': None, 'can_set_sticker_set': None}
+2019-07-26 15:51:29,070 -- telegram_bot.log -- main.py -- 183 -- INFO -- {'type': 'group', 'last_name': None, 'first_name': None, 'username': None, 'id': -362842147, 'title': 'dsfjkj', 'all_members_are_administrators': False, 'photo': None, 'description': None, 'invite_link': None, 'pinned_message': None, 'sticker_set_name': None, 'can_set_sticker_set': None}
+2019-07-26 15:51:40,198 -- telegram_bot.log -- main.py -- 215 -- INFO -- {'type': 'group', 'last_name': None, 'first_name': None, 'username': None, 'id': -362842147, 'title': 'dsfjkj', 'all_members_are_administrators': False, 'photo': None, 'description': None, 'invite_link': None, 'pinned_message': None, 'sticker_set_name': None, 'can_set_sticker_set': None}
+2019-07-26 15:51:46,878 -- telegram_bot.log -- main.py -- 237 -- INFO -- {'type': 'group', 'last_name': None, 'first_name': None, 'username': None, 'id': -362842147, 'title': 'dsfjkj', 'all_members_are_administrators': False, 'photo': None, 'description': None, 'invite_link': None, 'pinned_message': None, 'sticker_set_name': None, 'can_set_sticker_set': None}
+2019-07-26 16:46:00,658 -- telegram_bot.log -- main.py -- 54 -- INFO -- [<telebot.types.User object at 0x0000025E523E4F98>]
+2019-07-26 17:05:34,540 -- telegram_bot.log -- main.py -- 55 -- INFO -- [<telebot.types.User object at 0x00000244AC2BAD68>]
+2019-07-26 17:14:52,625 -- telegram_bot.log -- main.py -- 55 -- INFO -- [<telebot.types.User object at 0x00000244AC2D5E10>]
+2019-07-26 17:50:10,635 -- telegram_bot.log -- main.py -- 85 -- ERROR -- A request to the Telegram API was unsuccessful. The server returned HTTP 403 Forbidden. Response body:
+[b'{"ok":false,"error_code":403,"description":"Forbidden: bot was kicked from the group chat"}']
+2019-07-26 17:50:21,916 -- telegram_bot.log -- main.py -- 62 -- INFO -- [<telebot.types.User object at 0x000001F58E318C50>]
+2019-07-26 18:44:36,642 -- telegram_bot.log -- main.py -- 73 -- INFO -- [<telebot.types.User object at 0x000001FEF3C83588>]
+2019-07-26 18:49:47,483 -- telegram_bot.log -- main.py -- 73 -- INFO -- [<telebot.types.User object at 0x000001FEF3C91400>]
+2019-07-26 18:51:41,470 -- telegram_bot.log -- main.py -- 126 -- INFO -- 讲段子
+2019-07-26 18:52:09,752 -- telegram_bot.log -- main.py -- 126 -- INFO -- 讲段子
+2019-07-26 18:53:13,879 -- telegram_bot.log -- main.py -- 139 -- INFO -- /my_id@Bibo_dear2_bot
+2019-07-26 18:53:14,262 -- telegram_bot.log -- main.py -- 163 -- ERROR -- A request to the Telegram API was unsuccessful. The server returned HTTP 400 Bad Request. Response body:
+[b'{"ok":false,"error_code":400,"description":"Bad Request: can\'t parse entities: Can\'t find end of the entity starting at byte offset 144"}']
+2019-07-26 18:54:20,212 -- telegram_bot.log -- main.py -- 139 -- INFO -- /my_id@Bibo_dear2_bot
+2019-07-26 18:54:20,507 -- telegram_bot.log -- main.py -- 163 -- ERROR -- A request to the Telegram API was unsuccessful. The server returned HTTP 400 Bad Request. Response body:
+[b'{"ok":false,"error_code":400,"description":"Bad Request: can\'t parse entities: Can\'t find end of the entity starting at byte offset 144"}']
+2019-07-26 18:54:27,575 -- telegram_bot.log -- main.py -- 319 -- INFO -- {'type': 'supergroup', 'last_name': None, 'first_name': None, 'username': None, 'id': -1001236284617, 'title': '水年华顶级桑拿会所', 'all_members_are_administrators': None, 'photo': None, 'description': None, 'invite_link': None, 'pinned_message': None, 'sticker_set_name': None, 'can_set_sticker_set': None}
+2019-07-26 18:54:37,578 -- telegram_bot.log -- main.py -- 194 -- INFO -- {'type': 'supergroup', 'last_name': None, 'first_name': None, 'username': None, 'id': -1001236284617, 'title': '水年华顶级桑拿会所', 'all_members_are_administrators': None, 'photo': None, 'description': None, 'invite_link': None, 'pinned_message': None, 'sticker_set_name': None, 'can_set_sticker_set': None}
+2019-07-26 18:54:47,218 -- telegram_bot.log -- main.py -- 245 -- INFO -- {'type': 'supergroup', 'last_name': None, 'first_name': None, 'username': None, 'id': -1001236284617, 'title': '水年华顶级桑拿会所', 'all_members_are_administrators': None, 'photo': None, 'description': None, 'invite_link': None, 'pinned_message': None, 'sticker_set_name': None, 'can_set_sticker_set': None}
+2019-07-26 18:56:09,793 -- telegram_bot.log -- main.py -- 245 -- INFO -- {'type': 'supergroup', 'last_name': None, 'first_name': None, 'username': None, 'id': -1001236284617, 'title': '水年华顶级桑拿会所', 'all_members_are_administrators': None, 'photo': None, 'description': None, 'invite_link': None, 'pinned_message': None, 'sticker_set_name': None, 'can_set_sticker_set': None}
+2019-07-26 18:58:44,091 -- telegram_bot.log -- main.py -- 245 -- INFO -- {'type': 'supergroup', 'last_name': None, 'first_name': None, 'username': None, 'id': -1001236284617, 'title': '水年华顶级桑拿会所', 'all_members_are_administrators': None, 'photo': None, 'description': None, 'invite_link': None, 'pinned_message': None, 'sticker_set_name': None, 'can_set_sticker_set': None}
+2019-07-26 18:59:02,235 -- telegram_bot.log -- main.py -- 73 -- INFO -- [<telebot.types.User object at 0x000001FEF3CE0C50>]
+2019-07-26 18:59:27,783 -- telegram_bot.log -- main.py -- 245 -- INFO -- {'type': 'supergroup', 'last_name': None, 'first_name': None, 'username': None, 'id': -1001236284617, 'title': '水年华顶级桑拿会所', 'all_members_are_administrators': None, 'photo': None, 'description': None, 'invite_link': None, 'pinned_message': None, 'sticker_set_name': None, 'can_set_sticker_set': None}
+2019-07-26 19:14:01,454 -- telegram_bot.log -- main.py -- 245 -- INFO -- {'type': 'supergroup', 'last_name': None, 'first_name': None, 'username': None, 'id': -1001236284617, 'title': '水年华顶级桑拿会所', 'all_members_are_administrators': None, 'photo': None, 'description': None, 'invite_link': None, 'pinned_message': None, 'sticker_set_name': None, 'can_set_sticker_set': None}
+2019-07-26 19:14:33,561 -- telegram_bot.log -- main.py -- 73 -- INFO -- [<telebot.types.User object at 0x000001FEF3CEBDA0>]
+2019-07-26 19:53:10,618 -- telegram_bot.log -- main.py -- 73 -- INFO -- [<telebot.types.User object at 0x000001FEF3CEB9B0>]
+2019-07-26 19:56:24,511 -- telegram_bot.log -- main.py -- 245 -- INFO -- {'type': 'supergroup', 'last_name': None, 'first_name': None, 'username': None, 'id': -1001236284617, 'title': '水年华顶级桑拿会所', 'all_members_are_administrators': None, 'photo': None, 'description': None, 'invite_link': None, 'pinned_message': None, 'sticker_set_name': None, 'can_set_sticker_set': None}
+2019-07-26 19:56:37,972 -- telegram_bot.log -- main.py -- 245 -- INFO -- {'type': 'supergroup', 'last_name': None, 'first_name': None, 'username': None, 'id': -1001236284617, 'title': '水年华顶级桑拿会所', 'all_members_are_administrators': None, 'photo': None, 'description': None, 'invite_link': None, 'pinned_message': None, 'sticker_set_name': None, 'can_set_sticker_set': None}
+2019-07-26 20:02:27,022 -- telegram_bot.log -- main.py -- 140 -- INFO -- /my_id
+2019-07-26 20:03:16,088 -- telegram_bot.log -- main.py -- 74 -- INFO -- [<telebot.types.User object at 0x00000171DFF319B0>]
+2019-07-26 20:03:30,713 -- telegram_bot.log -- main.py -- 127 -- INFO -- 讲段子
+2019-07-26 20:03:31,284 -- telegram_bot.log -- main.py -- 127 -- INFO -- 讲段子
+2019-07-26 20:03:34,578 -- telegram_bot.log -- main.py -- 127 -- INFO -- 讲段子
+2019-07-26 20:04:16,903 -- telegram_bot.log -- main.py -- 131 -- INFO -- 讲段子
+2019-07-26 20:04:18,776 -- telegram_bot.log -- main.py -- 109 -- INFO -- {'id': 694841035, 'is_bot': False, 'first_name': '二', 'username': 'qqq11118', 'last_name': '头', 'language_code': 'zh-hans'}
+2019-07-26 20:04:18,776 -- telegram_bot.log -- main.py -- 110 -- INFO -- 天气状况
+2019-07-26 20:04:53,785 -- telegram_bot.log -- main.py -- 78 -- INFO -- [<telebot.types.User object at 0x000002C0502C1F28>]
+2019-07-26 20:08:27,753 -- telegram_bot.log -- main.py -- 199 -- INFO -- {'type': 'supergroup', 'last_name': None, 'first_name': None, 'username': None, 'id': -1001236284617, 'title': '水年华顶级桑拿会所', 'all_members_are_administrators': None, 'photo': None, 'description': None, 'invite_link': None, 'pinned_message': None, 'sticker_set_name': None, 'can_set_sticker_set': None}
+2019-07-26 20:08:30,378 -- telegram_bot.log -- main.py -- 199 -- INFO -- {'type': 'supergroup', 'last_name': None, 'first_name': None, 'username': None, 'id': -1001236284617, 'title': '水年华顶级桑拿会所', 'all_members_are_administrators': None, 'photo': None, 'description': None, 'invite_link': None, 'pinned_message': None, 'sticker_set_name': None, 'can_set_sticker_set': None}
+2019-07-26 20:08:43,010 -- telegram_bot.log -- main.py -- 199 -- INFO -- {'type': 'supergroup', 'last_name': None, 'first_name': None, 'username': None, 'id': -1001236284617, 'title': '水年华顶级桑拿会所', 'all_members_are_administrators': None, 'photo': None, 'description': None, 'invite_link': None, 'pinned_message': None, 'sticker_set_name': None, 'can_set_sticker_set': None}
+2019-07-26 20:09:12,442 -- telegram_bot.log -- main.py -- 218 -- INFO -- {'type': 'supergroup', 'last_name': None, 'first_name': None, 'username': None, 'id': -1001236284617, 'title': '水年华顶级桑拿会所', 'all_members_are_administrators': None, 'photo': None, 'description': None, 'invite_link': None, 'pinned_message': None, 'sticker_set_name': None, 'can_set_sticker_set': None}
+2019-07-26 20:10:53,421 -- telegram_bot.log -- main.py -- 78 -- INFO -- [<telebot.types.User object at 0x000001CF5ED61F98>]
+2019-07-26 20:14:32,176 -- telegram_bot.log -- main.py -- 78 -- INFO -- [<telebot.types.User object at 0x0000025E955D54E0>]
+2019-07-26 20:27:11,034 -- telegram_bot.log -- main.py -- 106 -- INFO -- {'id': 591220218, 'is_bot': False, 'first_name': '水年华', 'username': 'shui99', 'last_name': '蓝冰总监', 'language_code': 'zh-hans'}
+2019-07-26 20:27:11,035 -- telegram_bot.log -- main.py -- 107 -- INFO -- 天气状况
+2019-07-26 20:31:31,765 -- telegram_bot.log -- main.py -- 106 -- INFO -- {'id': 409967497, 'is_bot': False, 'first_name': '可乐', 'username': 'Llostcity', 'last_name': None, 'language_code': 'zh-hans'}
+2019-07-26 20:31:31,765 -- telegram_bot.log -- main.py -- 107 -- INFO -- 天气状况
+2019-07-26 20:31:55,224 -- telegram_bot.log -- main.py -- 128 -- INFO -- 讲段子
+2019-07-26 20:32:08,639 -- telegram_bot.log -- main.py -- 128 -- INFO -- 讲段子
+2019-07-26 20:37:43,550 -- telegram_bot.log -- main.py -- 78 -- INFO -- [<telebot.types.User object at 0x0000014760591BE0>]
+2019-07-26 20:42:02,118 -- telegram_bot.log -- main.py -- 78 -- INFO -- [<telebot.types.User object at 0x0000022C67755550>]
+2019-07-26 20:43:24,689 -- telegram_bot.log -- main.py -- 78 -- INFO -- [<telebot.types.User object at 0x000001697D37DCF8>]
+2019-07-26 20:52:24,352 -- telegram_bot.log -- main.py -- 197 -- INFO -- {'type': 'supergroup', 'last_name': None, 'first_name': None, 'username': None, 'id': -1001236284617, 'title': '水年华顶级桑拿会所', 'all_members_are_administrators': None, 'photo': None, 'description': None, 'invite_link': None, 'pinned_message': None, 'sticker_set_name': None, 'can_set_sticker_set': None}
+2019-07-26 21:21:12,122 -- telegram_bot.log -- main.py -- 25 -- INFO -- /start@Bibo_dear2_bot
+2019-07-26 21:21:39,072 -- telegram_bot.log -- main.py -- 130 -- INFO -- 讲段子
+2019-07-26 21:23:35,037 -- telegram_bot.log -- main.py -- 79 -- INFO -- [<telebot.types.User object at 0x00000280FC235668>]
+2019-07-26 21:44:06,611 -- telegram_bot.log -- main.py -- 202 -- INFO -- {'type': 'supergroup', 'last_name': None, 'first_name': None, 'username': None, 'id': -1001236284617, 'title': '水年华顶级桑拿会所', 'all_members_are_administrators': None, 'photo': None, 'description': None, 'invite_link': None, 'pinned_message': None, 'sticker_set_name': None, 'can_set_sticker_set': None}
+2019-07-26 21:50:48,875 -- telegram_bot.log -- main.py -- 221 -- INFO -- {'type': 'private', 'last_name': 'chen', 'first_name': 'voniry', 'username': None, 'id': 690205361, 'title': None, 'all_members_are_administrators': None, 'photo': None, 'description': None, 'invite_link': None, 'pinned_message': None, 'sticker_set_name': None, 'can_set_sticker_set': None}
+2019-07-26 22:36:34,531 -- telegram_bot.log -- main.py -- 84 -- INFO -- [<telebot.types.User object at 0x000002471B347048>]
+2019-07-26 22:37:00,187 -- telegram_bot.log -- main.py -- 25 -- INFO -- /start
+2019-07-26 22:37:47,575 -- telegram_bot.log -- main.py -- 112 -- INFO -- {'id': 817709241, 'is_bot': False, 'first_name': 'jeff', 'username': None, 'last_name': None, 'language_code': 'zh-hans'}
+2019-07-26 22:37:47,575 -- telegram_bot.log -- main.py -- 113 -- INFO -- 天气状况
+2019-07-26 22:37:48,555 -- telegram_bot.log -- main.py -- 112 -- INFO -- {'id': 817709241, 'is_bot': False, 'first_name': 'jeff', 'username': None, 'last_name': None, 'language_code': 'zh-hans'}
+2019-07-26 22:37:48,555 -- telegram_bot.log -- main.py -- 113 -- INFO -- 天气状况
+2019-07-26 22:37:48,927 -- telegram_bot.log -- main.py -- 112 -- INFO -- {'id': 817709241, 'is_bot': False, 'first_name': 'jeff', 'username': None, 'last_name': None, 'language_code': 'zh-hans'}
+2019-07-26 22:37:48,927 -- telegram_bot.log -- main.py -- 113 -- INFO -- 天气状况
+2019-07-26 22:37:49,647 -- telegram_bot.log -- main.py -- 112 -- INFO -- {'id': 817709241, 'is_bot': False, 'first_name': 'jeff', 'username': None, 'last_name': None, 'language_code': 'zh-hans'}
+2019-07-26 22:37:49,647 -- telegram_bot.log -- main.py -- 113 -- INFO -- 天气状况
+2019-07-26 22:37:50,473 -- telegram_bot.log -- main.py -- 112 -- INFO -- {'id': 817709241, 'is_bot': False, 'first_name': 'jeff', 'username': None, 'last_name': None, 'language_code': 'zh-hans'}
+2019-07-26 22:37:50,473 -- telegram_bot.log -- main.py -- 113 -- INFO -- 天气状况
+2019-07-26 22:38:47,342 -- telegram_bot.log -- main.py -- 25 -- INFO -- /start
+2019-07-26 22:43:58,391 -- telegram_bot.log -- main.py -- 25 -- INFO -- /start
+2019-07-26 22:51:40,110 -- telegram_bot.log -- main.py -- 25 -- INFO -- /start
+2019-07-26 22:51:47,005 -- telegram_bot.log -- main.py -- 25 -- INFO -- /start
+2019-07-26 22:51:56,626 -- telegram_bot.log -- main.py -- 112 -- INFO -- {'id': 747175373, 'is_bot': False, 'first_name': 'Big Dog', 'username': None, 'last_name': None, 'language_code': 'zh-hans'}
+2019-07-26 22:51:56,626 -- telegram_bot.log -- main.py -- 113 -- INFO -- 天气状况
+2019-07-26 22:51:56,636 -- telegram_bot.log -- main.py -- 112 -- INFO -- {'id': 747175373, 'is_bot': False, 'first_name': 'Big Dog', 'username': None, 'last_name': None, 'language_code': 'zh-hans'}
+2019-07-26 22:51:56,636 -- telegram_bot.log -- main.py -- 113 -- INFO -- 天气状况
+2019-07-26 22:51:57,622 -- telegram_bot.log -- main.py -- 112 -- INFO -- {'id': 747175373, 'is_bot': False, 'first_name': 'Big Dog', 'username': None, 'last_name': None, 'language_code': 'zh-hans'}
+2019-07-26 22:51:57,622 -- telegram_bot.log -- main.py -- 113 -- INFO -- 天气状况
+2019-07-26 23:16:08,124 -- telegram_bot.log -- main.py -- 112 -- INFO -- {'id': 487773421, 'is_bot': False, 'first_name': '172575', 'username': None, 'last_name': None, 'language_code': 'en'}
+2019-07-26 23:16:08,124 -- telegram_bot.log -- main.py -- 113 -- INFO -- 天气状况
+2019-07-26 23:16:09,304 -- telegram_bot.log -- main.py -- 134 -- INFO -- 讲段子
+2019-07-26 23:16:15,042 -- telegram_bot.log -- main.py -- 202 -- INFO -- {'type': 'supergroup', 'last_name': None, 'first_name': None, 'username': None, 'id': -1001236284617, 'title': '水年华顶级桑拿会所', 'all_members_are_administrators': None, 'photo': None, 'description': None, 'invite_link': None, 'pinned_message': None, 'sticker_set_name': None, 'can_set_sticker_set': None}
+2019-07-26 23:20:36,375 -- telegram_bot.log -- main.py -- 147 -- INFO -- /my_id@Bibo_dear2_bot
+2019-07-26 23:20:36,679 -- telegram_bot.log -- main.py -- 171 -- ERROR -- A request to the Telegram API was unsuccessful. The server returned HTTP 400 Bad Request. Response body:
+[b'{"ok":false,"error_code":400,"description":"Bad Request: can\'t parse entities: Can\'t find end of the entity starting at byte offset 124"}']
+2019-07-26 23:20:51,186 -- telegram_bot.log -- main.py -- 25 -- INFO -- /start@Bibo_dear2_bot
+2019-07-26 23:25:47,202 -- telegram_bot.log -- main.py -- 25 -- INFO -- /start
+2019-07-26 23:27:45,217 -- telegram_bot.log -- main.py -- 147 -- INFO -- /my_id
+2019-07-26 23:27:45,513 -- telegram_bot.log -- main.py -- 171 -- ERROR -- A request to the Telegram API was unsuccessful. The server returned HTTP 400 Bad Request. Response body:
+[b'{"ok":false,"error_code":400,"description":"Bad Request: can\'t parse entities: Can\'t find end of the entity starting at byte offset 124"}']
+2019-07-26 23:27:52,886 -- telegram_bot.log -- main.py -- 147 -- INFO -- /my_id
+2019-07-26 23:27:53,182 -- telegram_bot.log -- main.py -- 171 -- ERROR -- A request to the Telegram API was unsuccessful. The server returned HTTP 400 Bad Request. Response body:
+[b'{"ok":false,"error_code":400,"description":"Bad Request: can\'t parse entities: Can\'t find end of the entity starting at byte offset 124"}']
+2019-07-26 23:28:19,753 -- telegram_bot.log -- main.py -- 327 -- INFO -- {'type': 'private', 'last_name': 'chen', 'first_name': 'voniry', 'username': None, 'id': 690205361, 'title': None, 'all_members_are_administrators': None, 'photo': None, 'description': None, 'invite_link': None, 'pinned_message': None, 'sticker_set_name': None, 'can_set_sticker_set': None}
+2019-07-26 23:54:37,556 -- telegram_bot.log -- main.py -- 147 -- INFO -- /my_id@Bibo_dear2_bot
+2019-07-26 23:54:41,179 -- telegram_bot.log -- main.py -- 147 -- INFO -- /my_id@Bibo_dear2_bot
+2019-07-26 23:54:41,663 -- telegram_bot.log -- main.py -- 171 -- ERROR -- A request to the Telegram API was unsuccessful. The server returned HTTP 400 Bad Request. Response body:
+[b'{"ok":false,"error_code":400,"description":"Bad Request: can\'t parse entities: Can\'t find end of the entity starting at byte offset 129"}']
+2019-07-26 23:54:42,365 -- telegram_bot.log -- main.py -- 171 -- ERROR -- A request to the Telegram API was unsuccessful. The server returned HTTP 400 Bad Request. Response body:
+[b'{"ok":false,"error_code":400,"description":"Bad Request: can\'t parse entities: Can\'t find end of the entity starting at byte offset 129"}']
+2019-07-26 23:54:42,756 -- telegram_bot.log -- main.py -- 147 -- INFO -- /my_id@Bibo_dear2_bot
+2019-07-26 23:54:43,078 -- telegram_bot.log -- main.py -- 171 -- ERROR -- A request to the Telegram API was unsuccessful. The server returned HTTP 400 Bad Request. Response body:
+[b'{"ok":false,"error_code":400,"description":"Bad Request: can\'t parse entities: Can\'t find end of the entity starting at byte offset 120"}']
+2019-07-26 23:54:44,300 -- telegram_bot.log -- main.py -- 147 -- INFO -- /my_id@Bibo_dear2_bot
+2019-07-26 23:54:44,664 -- telegram_bot.log -- main.py -- 171 -- ERROR -- A request to the Telegram API was unsuccessful. The server returned HTTP 400 Bad Request. Response body:
+[b'{"ok":false,"error_code":400,"description":"Bad Request: can\'t parse entities: Can\'t find end of the entity starting at byte offset 120"}']
+2019-07-26 23:54:46,679 -- telegram_bot.log -- main.py -- 147 -- INFO -- /my_id@Bibo_dear2_bot
+2019-07-26 23:54:46,996 -- telegram_bot.log -- main.py -- 171 -- ERROR -- A request to the Telegram API was unsuccessful. The server returned HTTP 400 Bad Request. Response body:
+[b'{"ok":false,"error_code":400,"description":"Bad Request: can\'t parse entities: Can\'t find end of the entity starting at byte offset 120"}']
+2019-07-27 00:26:30,841 -- telegram_bot.log -- main.py -- 25 -- INFO -- /start@Bibo_dear2_bot
+2019-07-27 00:26:37,518 -- telegram_bot.log -- main.py -- 25 -- INFO -- /start@Bibo_dear2_bot
+2019-07-27 00:26:44,992 -- telegram_bot.log -- main.py -- 134 -- INFO -- 讲段子
+2019-07-27 00:26:47,766 -- telegram_bot.log -- main.py -- 134 -- INFO -- 讲段子
+2019-07-27 00:26:49,091 -- telegram_bot.log -- main.py -- 134 -- INFO -- 讲段子
+2019-07-27 00:26:49,194 -- telegram_bot.log -- main.py -- 134 -- INFO -- 讲段子
+2019-07-27 00:26:50,029 -- telegram_bot.log -- main.py -- 134 -- INFO -- 讲段子
+2019-07-27 00:26:52,488 -- telegram_bot.log -- main.py -- 134 -- INFO -- 讲段子
+2019-07-27 00:27:14,177 -- telegram_bot.log -- main.py -- 112 -- INFO -- {'id': 791669562, 'is_bot': False, 'first_name': 'Aaron', 'username': None, 'last_name': None, 'language_code': 'zh-hans'}
+2019-07-27 00:27:14,177 -- telegram_bot.log -- main.py -- 113 -- INFO -- 天气状况
+2019-07-27 00:45:34,795 -- telegram_bot.log -- main.py -- 25 -- INFO -- /start
+2019-07-27 00:46:07,081 -- telegram_bot.log -- main.py -- 25 -- INFO -- /start@Bibo_dear2_bot
+2019-07-27 01:39:52,261 -- telegram_bot.log -- main.py -- 84 -- INFO -- [<telebot.types.User object at 0x000002471B312828>]
+2019-07-27 01:40:13,602 -- telegram_bot.log -- main.py -- 25 -- INFO -- /start@Bibo_dear2_bot
+2019-07-27 01:40:21,842 -- telegram_bot.log -- main.py -- 25 -- INFO -- /start
+2019-07-27 01:42:46,583 -- telegram_bot.log -- main.py -- 112 -- INFO -- {'id': 815620292, 'is_bot': False, 'first_name': '小个', 'username': None, 'last_name': '黑', 'language_code': 'zh-hans'}
+2019-07-27 01:42:46,583 -- telegram_bot.log -- main.py -- 113 -- INFO -- 天气状况
+2019-07-27 01:58:48,854 -- telegram_bot.log -- main.py -- 25 -- INFO -- /start@Bibo_dear2_bot
+2019-07-27 01:58:50,840 -- telegram_bot.log -- main.py -- 25 -- INFO -- /start@Bibo_dear2_bot
+2019-07-27 02:31:29,248 -- telegram_bot.log -- main.py -- 25 -- INFO -- /start@Bibo_dear2_bot
+2019-07-27 02:54:52,777 -- telegram_bot.log -- main.py -- 25 -- INFO -- /start@Bibo_dear2_bot
+2019-07-27 03:39:22,486 -- telegram_bot.log -- main.py -- 84 -- INFO -- [<telebot.types.User object at 0x000002471B347518>]
+2019-07-27 03:39:58,091 -- telegram_bot.log -- main.py -- 25 -- INFO -- /start@Bibo_dear2_bot
+2019-07-27 03:39:59,447 -- telegram_bot.log -- main.py -- 25 -- INFO -- /start@Bibo_dear2_bot
+2019-07-27 06:41:51,633 -- telegram_bot.log -- main.py -- 25 -- INFO -- /start@Bibo_dear2_bot
+2019-07-27 06:42:01,162 -- telegram_bot.log -- main.py -- 25 -- INFO -- /start@Bibo_dear2_bot
+2019-07-27 06:42:24,890 -- telegram_bot.log -- main.py -- 25 -- INFO -- /start@Bibo_dear2_bot
+2019-07-27 06:42:28,357 -- telegram_bot.log -- main.py -- 134 -- INFO -- 讲段子
+2019-07-27 06:59:31,869 -- telegram_bot.log -- main.py -- 253 -- INFO -- {'type': 'supergroup', 'last_name': None, 'first_name': None, 'username': None, 'id': -1001236284617, 'title': '水年华顶级桑拿会所', 'all_members_are_administrators': None, 'photo': None, 'description': None, 'invite_link': None, 'pinned_message': None, 'sticker_set_name': None, 'can_set_sticker_set': None}
+2019-07-27 06:59:57,461 -- telegram_bot.log -- main.py -- 25 -- INFO -- /start@Bibo_dear2_bot
+2019-07-27 07:00:23,086 -- telegram_bot.log -- main.py -- 25 -- INFO -- /start
+2019-07-27 10:19:05,197 -- telegram_bot.log -- main.py -- 84 -- INFO -- [<telebot.types.User object at 0x000002471B3124A8>]
+2019-07-27 10:34:22,231 -- telegram_bot.log -- main.py -- 25 -- INFO -- /start
+2019-07-27 12:46:34,295 -- telegram_bot.log -- main.py -- 25 -- INFO -- /start@Bibo_dear2_bot
+2019-07-27 12:57:00,157 -- telegram_bot.log -- main.py -- 25 -- INFO -- /start@Bibo_dear2_bot
+2019-07-27 12:57:06,242 -- telegram_bot.log -- main.py -- 25 -- INFO -- /start@Bibo_dear2_bot
+2019-07-27 13:13:59,819 -- telegram_bot.log -- main.py -- 25 -- INFO -- /start@Bibo_dear2_bot
+2019-07-27 13:14:06,063 -- telegram_bot.log -- main.py -- 134 -- INFO -- 讲段子
+2019-07-27 13:14:56,872 -- telegram_bot.log -- main.py -- 134 -- INFO -- 讲段子
+2019-07-27 14:33:14,325 -- telegram_bot.log -- main.py -- 25 -- INFO -- /start@Bibo_dear2_bot
+2019-07-27 14:35:18,385 -- telegram_bot.log -- main.py -- 134 -- INFO -- 讲段子
+2019-07-27 14:36:01,016 -- telegram_bot.log -- main.py -- 112 -- INFO -- {'id': 675133854, 'is_bot': False, 'first_name': '那里', 'username': None, 'last_name': '有你', 'language_code': 'zh-hans'}
+2019-07-27 14:36:01,017 -- telegram_bot.log -- main.py -- 113 -- INFO -- 天气状况
+2019-07-27 14:36:18,777 -- telegram_bot.log -- main.py -- 134 -- INFO -- 讲段子
+2019-07-27 14:36:52,758 -- telegram_bot.log -- main.py -- 112 -- INFO -- {'id': 860437395, 'is_bot': False, 'first_name': '阿', 'username': None, 'last_name': '弘', 'language_code': 'zh-hans'}
+2019-07-27 14:36:52,758 -- telegram_bot.log -- main.py -- 113 -- INFO -- 天气状况
+2019-07-27 14:58:21,438 -- telegram_bot.log -- main.py -- 202 -- INFO -- {'type': 'supergroup', 'last_name': None, 'first_name': None, 'username': None, 'id': -1001236284617, 'title': '水年华顶级桑拿会所', 'all_members_are_administrators': None, 'photo': None, 'description': None, 'invite_link': None, 'pinned_message': None, 'sticker_set_name': None, 'can_set_sticker_set': None}
+2019-07-27 14:58:28,768 -- telegram_bot.log -- main.py -- 221 -- INFO -- {'type': 'supergroup', 'last_name': None, 'first_name': None, 'username': None, 'id': -1001236284617, 'title': '水年华顶级桑拿会所', 'all_members_are_administrators': None, 'photo': None, 'description': None, 'invite_link': None, 'pinned_message': None, 'sticker_set_name': None, 'can_set_sticker_set': None}
+2019-07-27 15:00:19,991 -- telegram_bot.log -- main.py -- 134 -- INFO -- 讲段子
+2019-07-27 15:00:20,549 -- telegram_bot.log -- main.py -- 134 -- INFO -- 讲段子
+2019-07-27 15:00:25,440 -- telegram_bot.log -- main.py -- 221 -- INFO -- {'type': 'supergroup', 'last_name': None, 'first_name': None, 'username': None, 'id': -1001236284617, 'title': '水年华顶级桑拿会所', 'all_members_are_administrators': None, 'photo': None, 'description': None, 'invite_link': None, 'pinned_message': None, 'sticker_set_name': None, 'can_set_sticker_set': None}
+2019-07-27 15:02:13,159 -- telegram_bot.log -- main.py -- 84 -- INFO -- [<telebot.types.User object at 0x000002471BB74FD0>]
+2019-07-27 16:06:38,058 -- telegram_bot.log -- main.py -- 25 -- INFO -- /start@Bibo_dear2_bot
+2019-07-27 16:07:33,011 -- telegram_bot.log -- main.py -- 134 -- INFO -- 讲段子
+2019-07-27 16:07:36,695 -- telegram_bot.log -- main.py -- 112 -- INFO -- {'id': 653049703, 'is_bot': False, 'first_name': '✨С1✨', 'username': 'asdzxcgv', 'last_name': None, 'language_code': 'zh-hans'}
+2019-07-27 16:07:36,695 -- telegram_bot.log -- main.py -- 113 -- INFO -- 天气状况
+2019-07-28 14:16:35,528 -- telegram_bot.log -- main.py -- 358 -- INFO -- {'type': 'private', 'last_name': 'bibo', 'first_name': 'bibo', 'username': 'bibo_dear', 'id': 631099108, 'title': None, 'all_members_are_administrators': None, 'photo': None, 'description': None, 'invite_link': None, 'pinned_message': None, 'sticker_set_name': None, 'can_set_sticker_set': None}
+2019-07-28 14:16:47,898 -- telegram_bot.log -- main.py -- 91 -- INFO -- /start
+2019-07-28 14:17:12,021 -- telegram_bot.log -- main.py -- 380 -- INFO -- {'type': 'private', 'last_name': 'bibo', 'first_name': 'bibo', 'username': 'bibo_dear', 'id': 631099108, 'title': None, 'all_members_are_administrators': None, 'photo': None, 'description': None, 'invite_link': None, 'pinned_message': None, 'sticker_set_name': None, 'can_set_sticker_set': None}
+2019-07-28 14:17:17,965 -- telegram_bot.log -- main.py -- 207 -- INFO -- /my_id
+2019-07-28 14:17:31,827 -- telegram_bot.log -- main.py -- 91 -- INFO -- /start@Bibo_dear2_bot
+2019-07-28 14:18:46,965 -- telegram_bot.log -- main.py -- 78 -- INFO -- /ban

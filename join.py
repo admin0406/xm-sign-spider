@@ -18,7 +18,7 @@ def add_in(user):
             f.write(user)
             f.write('\n')
             f.close()
-            sf = open('adminlist', 'a+')
+            sf = open('admin_list', 'a+')
             s = ' | '
             localtime = time.strftime("%m-%d|%H:%M:%S", time.localtime())
             rr = localtime + s + r
