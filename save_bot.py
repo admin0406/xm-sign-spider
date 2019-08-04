@@ -23,25 +23,6 @@ def get_nickname(message):
     return username
 
 
-# 存储数据库
-@bot.message_handler(func=lambda message: True)
-def save_message_to_sql(message):
-    try:
-        save_text_to_sql(nick_name=get_nickname(message), chat_id=message.from_user.id, new_chat_member='0',
-                         left_chat_member='0', text=message.text, other='0')
-    except:
-        pass
-
-
-# 文件类型
-@bot.message_handler(content_types=['audio', 'document', 'gif', 'photo', 'sticker', 'video', 'voice',
-                                    'game', 'video_note'])
-def send_file_message(message):
-    try:
-        save_text_to_sql(nick_name=get_nickname(message), chat_id=message.from_user.id, other='1')
-    except:
-        pass
-
 
 if __name__ == '__main__':
     bot.polling(none_stop=True)

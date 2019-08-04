@@ -1,7 +1,5 @@
-# *--conding:utf-8--*
-import sqlite3
-
-import yaml
+ # *--conding:utf-8--*
+import re
 
 
 def get_username(message):
@@ -21,67 +19,14 @@ def get_nickname(message):
     return username
 
 
-# 见表
-def creat_table():
-    """创建表"""
-    conncet = sqlite3.connect('telegram_user')
-    curs = conncet.cursor()
-    curs.execute(
-        "create table User_messages(id integer PRIMARY KEY AUTOINCREMENT,nick_name varchar(255),chat_id int(11),send_time TIMESTAMP default (datetime('now','localtime')))")
-
-    curs.close()
-    conncet.close()
+def get_chat_id(message):
+    return message.from_user.id
 
 
-# 插入数据库签到表
-def insert_sign(telegram_user_name, chat_id):
-    sql = "insert into User_sign(user_name,chat_id) values ('{}','{}');".format(
-        telegram_user_name, chat_id)
-    conn = sqlite3.connect('telegram_user')
-    cur = conn.cursor()
-    try:
-        cur.execute(sql)
-        conn.commit()
-        return cur.rowcount
-    except:
-        conn.rollback()
-    finally:
-        cur.close()
-        conn.close()
-
-
-# 查询累计签到
-def search_signs(chat_id):
-    sql = "SELECT COUNT(1) from User_sign WHERE chat_id =='{}';".format(chat_id)
-    conn = sqlite3.connect('telegram_user')
-    cur = conn.cursor()
-    try:
-        cur.execute(sql)
-        return cur.fetchone()[0]
-    except:
-        pass
-    finally:
-        cur.close()
-        conn.close()
-
-
-# 查询最后一次签到的时间
-def search_last_sign_time(chat_id):
-    sql = "SELECT sign_time from User_sign WHERE chat_id ='{}' order by  id desc limit 1;".format(chat_id)
-    conn = sqlite3.connect('telegram_user')
-    cur = conn.cursor()
-    try:
-        cur.execute(sql)
-        return cur.fetchone()[0]
-    except:
-        pass
-    finally:
-        cur.close()
-        conn.close()
-
-
-def save_text_to_sql(nick_name, chat_id, new_chat_member='0', left_chat_member='0', text='', other='0'):
-    sql = "insert into User_messages(nick_name,chat_id,new_chat_member,left_chat_member,text,other) values ('{}','{}','{}','{}','{}','{}');".format(
-        nick_name, chat_id, new_chat_member, left_chat_member, text, other)
-    with sqlite3.connect('telegram_user')as conn:
-        conn.cursor().execute(sql)
+def get_user_shelf_and_save(msg):
+    info = dict()
+    info['chat_id'] = get_chat_id(msg)
+    info['title'] = re.findall('标题:(.*)', msg.text)[0]
+    info['description'] = re.findall('描述:(.*)', msg.text)[0]
+    info['price'] = re.findall('价格:(\d{2,6})', msg.text)[0]
+    return info
