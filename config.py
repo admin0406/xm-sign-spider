@@ -1,7 +1,8 @@
 # *--conding:utf-8--*
+import os
 API_TOKEN = '938619629:AAF3aR9AQniQzHJSb3PJChocfBnlKMLQiqs'
 
-
+MUSIC_PATH = os.path.abspath(os.path.join(os.getcwd(),'./music_file/'))
 URL = {
     # 笑话
     'joke_url': 'http://www.mxnzp.com/api/jokes/list/random',

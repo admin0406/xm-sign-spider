@@ -1,14 +1,13 @@
 # *--conding:utf-8--*
-import threading
-import time
+import os
+import random
 
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup
-from config import API_TOKEN
+from config import API_TOKEN, MUSIC_PATH
 import telebot
 from telebot import types, logger
 import requests
-from data_comming import *
-from sqlalchemy import create_engine, and_
+from data_comming import get_all_music_list, download
 from models import *
 
 requests.adapters.DEFAULT_RETRIES = 5
@@ -20,12 +19,12 @@ bot = telebot.TeleBot(token=API_TOKEN)
 # 底部标签
 def bottom_markup():
     markup = ReplyKeyboardMarkup()
-    markup.row_width = 2
-    markup.add(InlineKeyboardButton("👤买家中心", callback_data='buyer'),
-               InlineKeyboardButton("🤵卖家中心", callback_data='seller'),
-               InlineKeyboardButton("🏧充币/提币", callback_data='coin'),
-               InlineKeyboardButton("🙋🏻‍♂️联系客服", callback_data='customer')
-               )
+    markup.row_width = 4
+    markup.one_time_keyboard = 2
+    markup.add(InlineKeyboardButton("💿热搜榜推荐", callback_data='recommend'),
+               InlineKeyboardButton("🈲写代码专用", callback_data='very_hot'),
+               InlineKeyboardButton("🎻小品相声", callback_data='classic_music'),
+               InlineKeyboardButton("📗我要上传", callback_data='upload'))
     return markup
 
 
@@ -33,10 +32,11 @@ def bottom_markup():
 def seller_markup():
     markup = InlineKeyboardMarkup()
     markup.row_width = 2
-    markup.add(InlineKeyboardButton("发布商品", callback_data='publish'),
-               InlineKeyboardButton("我的货架", callback_data='my_shelf'),
+    markup.add(InlineKeyboardButton("今日出勤", callback_data='publish'),
+               InlineKeyboardButton("照片选人", callback_data='my_shelf'),
                InlineKeyboardButton("交易完成", callback_data='all_rigth'),
-               InlineKeyboardButton("交易中", callback_data='transaction'))
+               InlineKeyboardButton("交易中", callback_data='transaction'),
+               InlineKeyboardButton("🙋🏻‍♂联系客服", url='t.me/bibo_dear'))
     return markup
 
 
@@ -59,176 +59,130 @@ def recharge_markup():
     return markup
 
 
-user_dict = dict()
-
-
 @bot.message_handler(commands=['start'])
 def handle_start(message):
     try:
-        bot.send_message(message.chat.id, "🌹欢迎来到8号商城,发送关键字可以搜索商品\n".format(get_nickname(message)),
+        bot.send_message(message.chat.id, "🌹欢迎来到天上一枝梅的音乐空间\n",
                          reply_markup=bottom_markup())
 
     except Exception as e:
         logger.error(e)
-
-
-@bot.message_handler(func=lambda msg: msg.text == '👤买家中心')
-def get_buyer_info(msg):
-    try:
-        bot.send_message(msg.chat.id, "欢迎!你的可用余额:0BTC\n"
-                                      "⚠️点击个人详情备份你的账号密钥,当你的Telegram账号无法登录你可以使用密钥进行账号找回\n"
-                                      "⚠️当其他人使用你的推广链接注册并完成交易可以获取积分,可以换取权益或BTC\n"
-                                      "⚠️点击我买到的可以查看✅已完成和⚠️未完成的订单", reply_markup=buyer_markup())
-    except Exception as e:
-        logger.error(e)
-
-
-@bot.message_handler(func=lambda msg: msg.text == '🤵卖家中心')
-def get_buyer_info(msg):
-    try:
-        bot.send_message(msg.chat.id, "欢迎!你的余额:0BTC\n"
-                                      "在闲鱼你可以出售任何服务/数据,比特币数量根据付款当时的汇率换算,让你不用担心币价浮动", reply_markup=seller_markup())
-    except Exception as e:
-        logger.error(e)
-
-
-# 发布商品
-@bot.callback_query_handler(func=lambda call: call.data == 'publish')
-def publish(call):
-    try:
-        user_dict['chat_id'] = call.from_user.id
-        msg = bot.reply_to(call.message, "请输入商品标题:(不能超过30个字)")
-        bot.register_next_step_handler(msg, get_user_input_title)
-    except Exception as e:
-        logger.error(e)
-
-
-# 接受用户输入标题
-def get_user_input_title(message):
-    try:
-        if len(message.text) < 31:
-            user_dict['title'] = message.text
-            msg = bot.reply_to(message, '请输入商品描述:')
-            bot.register_next_step_handler(msg, get_user_input_description)
-        else:
-            msg = bot.reply_to(message, '标题过长，请重新输入:(不能超过30个字)')
-            bot.register_next_step_handler(msg, get_user_input_title)
-    except Exception as e:
-        logger.error(e)
-
-
-# 接受用户输入描述信息
-def get_user_input_description(message):
-    try:
-        if len(message.text) < 201:
-            user_dict['description'] = message.text
-            msg = bot.reply_to(message, '请输入商品价格:(10-10万的整数)')
-            bot.register_next_step_handler(msg, get_user_input_price)
-        else:
-            msg = bot.reply_to(message, '超出限制，请重新输入:')
-            bot.register_next_step_handler(msg, get_user_input_description)
-    except Exception as e:
-        logger.error(e)
-
-
-# 接受用户输入价格
-def get_user_input_price(message):
-    try:
-        if not message.text.isdigit() or int(message.text) < 10 or int(message.text) > 100000:
-            msg = bot.reply_to(message, '输入错误，请重新输入:(10-10万的整数)')
-            bot.register_next_step_handler(msg, get_user_input_price)
-        else:
-            user_dict['price'] = int(message.text)
-            msg = bot.reply_to(message, "您输入的信息为:\n"
-                                        "标题:{}\n"
-                                        "描述:{}\n"
-                                        "价格:{}\n"
-                                        '确认无误请输入:1'.format(user_dict['title'], user_dict['description'],
-                                                           user_dict['price']))
-
-            bot.register_next_step_handler(msg, get_user_input_is_ok)
-    except Exception as e:
-        logger.error(e)
-
-
-# 确认用户添加商品信息
-def get_user_input_is_ok(message):
-    try:
-        if message.text.strip() == '1':
-            new_comm = Commodity(chat_id=user_dict['chat_id'], title=user_dict['title'],
-                                 description=user_dict['description'], price=user_dict['price'])
-            session = Session()
-            session.add(new_comm)
-            session.commit()
-            session.close()
-            bot.reply_to(message, '添加成功')
-        else:
-            pass
-    except Exception as e:
-        logger.error(e)
-
-
-# 我的货架
-@bot.callback_query_handler(func=lambda call: call.data == 'my_shelf')
-def my_shelf(call):
-    try:
-        session = Session()
-        info = session.query(Commodity).filter(Commodity.chat_id == call.from_user.id).all()
-        if len(info) > 0:
-            msg = '您发布过的商品有:\n'
-            for one in info:
-                msg += "❤️标题: {:} - 价格: {} - 发布时间: {}\n".format(one.title, one.price, one.add_time)
-            bot.send_message(call.message.chat.id, msg)
-        else:
-            bot.reply_to(call.message, '😂暂无商品,快去发布你的第一个商品吧~')
-        session.close()
-    except Exception as e:
-        logger.error(e)
-
-
-# 交易完成
-@bot.callback_query_handler(func=lambda call: call.data == 'all_rigth')
-def all_riget(call):
-    try:
-        session = Session()
-        infos = session.query(Commodity).filter(
-            and_(Commodity.chat_id == call.from_user.id, Commodity.is_over == 1)).all()
-        if len(infos) > 0:
-            msg = '您交易完成的商品有:\n'
-            for one in infos:
-                msg += "❤️标题: {:} - 价s格: {} - 交易时间: {}\n".format(one.title, one.price, one.updatetime)
-            bot.send_message(call.message.chat.id, msg)
-        else:
-            bot.reply_to(call.message, '😂暂无商品,快去发布你的第一个商品吧~')
-        session.close()
-    except Exception as e:
-        logger.info(e)
-
-
-@bot.message_handler(func=lambda msg: msg.text == '🏧充币/提币')
-def get_buyer_info(msg):
-    try:
-        bot.send_message(msg.chat.id, "欢迎!你的余额:0BTC\n", reply_markup=recharge_markup())
-    except Exception as e:
-        logger.error(e)
-
-
-@bot.message_handler(func=lambda msg: msg.text == '🙋🏻‍♂️联系客服')
-def get_buyer_info(msg):
-    try:
-        bot.send_message(msg.chat.id, "客服只负责处理交易纠纷,充提币问题以及系统错误.")
-    except Exception as e:
-        logger.error(e)
+        pass
 
 
 @bot.message_handler(func=lambda msg: msg.text)
-def search_text(msg):
+def musin(message):
     try:
-        info_dic = get_user_shelf_and_save(msg)
-        print(info_dic)
+        if message.text == '💿热搜榜推荐':
+            try:
+                hot_list = search_db_by_hot(1)
+                msg = '❤️可以输入歌名快速搜索\n热搜推荐:\n'
+                for one in random.sample(hot_list, 20):
+                    msg += "❤ `{}` \n".format(one[0])
+                bot.send_message(message.chat.id, msg, parse_mode='Markdown')
+            except Exception as e:
+                logger.error(e)
+                pass
+        elif message.text == '🈲写代码专用':
+            try:
+                hot_list = search_db_by_hot(2)
+                msg = '❤️可以输入歌名快速搜索\n写代码推荐:\n'
+                for one in hot_list:
+                    msg += "❤ `{}` \n".format(one[0])
+                bot.send_message(message.chat.id, msg, parse_mode='Markdown')
+            except Exception as e:
+                logger.error(e)
+                pass
+        elif message.text == '🎻小品相声':
+            try:
+                hot_list = search_db_by_type('小品')
+                msg = '❤️可以输入歌名快速搜索\n小品推荐:\n'
+                for one in random.sample(hot_list, 20):
+                    msg += "❤ `{}` \n".format(one[0])
+                bot.send_message(message.chat.id, msg, parse_mode='Markdown')
+            except Exception as e:
+                logger.error(e)
+                pass
+        elif message.text == '📗我要上传':
+            try:
+                msg = bot.reply_to(message, '请输入你要上传的类型:\n'
+                                            '`经典` `串烧` `小品`\n'
+                                            'q 退出,可以复制`youtube`的链接直接上传\n'
+                                            'youtube链接   一曲相思', parse_mode='Markdown')
+                bot.register_next_step_handler(msg, get_user_input_type)
+            except Exception as e:
+                logger.error(e)
+                pass
 
-    except:
+        else:
+            name = message.text.strip()
+            try:
+                result = search_db(name)
+                bot.send_message(message.chat.id, '[{}]({})'.format(result[0], result[1]), parse_mode='Markdown')
+            except:
+                music_list = get_all_music_list()
+                if name+'.mp3' in music_list:
+                    bot.reply_to(message,'正在发送....')
+                    with open(MUSIC_PATH+'\\'+name+'.mp3','rb')as f:
+                        bot.send_audio(message.chat.id,f,timeout=60)
+                else:
+                    bot.reply_to(message,'没有这首歌')
+                    pass
+    except Exception as e:
+        logger.error(e)
         pass
+
+
+lei_type = ['经典', '串烧', '小品']
+user_dict = dict()
+
+
+def get_user_input_type(message):
+    if message.text.strip() in lei_type:
+        user_dict['type'] = message.text
+        mes = bot.reply_to(message, '请输入歌曲名称:(不能超过10个字)')
+        bot.register_next_step_handler(mes, get_user_input_name)
+    elif message.text.strip().upper() == 'Q':
+        bot.reply_to(message, '退出成功，你现在可以输入歌名进行快速搜索额')
+    elif message.text.startswith('http'):
+        url ,name = message.text.strip().split()
+        if name+'.mp3' not in get_all_music_list():
+            bot.reply_to(message,'正在上传，请稍等.....')
+            os.chdir(MUSIC_PATH)
+            download(url, name)
+            bot.reply_to(message,'上传成功')
+        else:
+            bot.reply_to(message,'已经存在，你可以直接输入歌名进行搜索')
+            pass
+    else:
+        msg = bot.reply_to(message, '类型不存在，请[联系客服](t.me/bibo_dear)添加，或者重新输入',parse_mode='Markdown')
+        bot.register_next_step_handler(msg, get_user_input_type)
+
+
+def get_user_input_name(message):
+    if len(message.text) > 10:
+        msg = bot.reply_to(message, '名字太长，请重新输入')
+        bot.register_next_step_handler(msg, get_user_input_name)
+    elif message.text.strip().upper() == 'Q':
+        bot.reply_to(message, '退出成功，你现在可以输入歌名进行快速搜索额')
+    else:
+        user_dict['name'] = message.text
+        msg = bot.reply_to(message, '请拖入音频文件:')
+        bot.register_next_step_handler(msg, save_user_input_file)
+
+
+def save_user_input_file(message):
+    if message.content_type == 'audio':
+        user_dict['file_id'] = message.audio.file_id
+        file = bot.get_file(file_id=message.audio.file_id)
+        new_file = bot.download_file(file.file_path)
+        with open('music_file\\{}.mp3'.format(user_dict['name']),'wb')as f:
+            f.write(new_file)
+        bot.reply_to(message,'上传成功！')
+    elif message.text.strip().upper() == 'Q':
+        bot.reply_to(message,'退出成功，你现在可以输入歌名进行快速搜索额')
+    else:
+        bot.reply_to(message, '上传的不是音频文件，请重新拖入文件上传！')
 
 
 if __name__ == '__main__':
