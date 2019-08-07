@@ -19,7 +19,7 @@ bot = telebot.TeleBot(token=API_TOKEN)
 # 底部标签
 def bottom_markup():
     markup = ReplyKeyboardMarkup()
-    markup.row_width = 4
+    markup.row_width = 2
     markup.one_time_keyboard = 2
     markup.add(InlineKeyboardButton("💿热搜榜推荐", callback_data='recommend'),
                InlineKeyboardButton("🈲写代码专用", callback_data='very_hot'),
@@ -27,36 +27,36 @@ def bottom_markup():
                InlineKeyboardButton("📗我要上传", callback_data='upload'))
     return markup
 
-
-# 卖家标签
-def seller_markup():
-    markup = InlineKeyboardMarkup()
-    markup.row_width = 2
-    markup.add(InlineKeyboardButton("今日出勤", callback_data='publish'),
-               InlineKeyboardButton("照片选人", callback_data='my_shelf'),
-               InlineKeyboardButton("交易完成", callback_data='all_rigth'),
-               InlineKeyboardButton("交易中", callback_data='transaction'),
-               InlineKeyboardButton("🙋🏻‍♂联系客服", url='t.me/bibo_dear'))
-    return markup
-
-
-# 买家标签
-def buyer_markup():
-    markup = InlineKeyboardMarkup()
-    markup.row_width = 2
-    markup.add(InlineKeyboardButton("个人详情", callback_data='user_info'),
-               InlineKeyboardButton("邀请链接", callback_data='my_link'),
-               InlineKeyboardButton("我买到的", callback_data='my_buy'))
-    return markup
-
-
-# 充值标签
-def recharge_markup():
-    markup = InlineKeyboardMarkup()
-    markup.row_width = 2
-    markup.add(InlineKeyboardButton("🏧充币", callback_data='recharge'),
-               InlineKeyboardButton("提币", callback_data='drawal'))
-    return markup
+#
+# # 卖家标签
+# def seller_markup():
+#     markup = InlineKeyboardMarkup()
+#     markup.row_width = 2
+#     markup.add(InlineKeyboardButton("今日出勤", callback_data='publish'),
+#                InlineKeyboardButton("照片选人", callback_data='my_shelf'),
+#                InlineKeyboardButton("交易完成", callback_data='all_rigth'),
+#                InlineKeyboardButton("交易中", callback_data='transaction'),
+#                InlineKeyboardButton("🙋🏻‍♂联系客服", url='t.me/bibo_dear'))
+#     return markup
+#
+#
+# # 买家标签
+# def buyer_markup():
+#     markup = InlineKeyboardMarkup()
+#     markup.row_width = 2
+#     markup.add(InlineKeyboardButton("个人详情", callback_data='user_info'),
+#                InlineKeyboardButton("邀请链接", callback_data='my_link'),
+#                InlineKeyboardButton("我买到的", callback_data='my_buy'))
+#     return markup
+#
+#
+# # 充值标签
+# def recharge_markup():
+#     markup = InlineKeyboardMarkup()
+#     markup.row_width = 2
+#     markup.add(InlineKeyboardButton("🏧充币", callback_data='recharge'),
+#                InlineKeyboardButton("提币", callback_data='drawal'))
+#     return markup
 
 
 @bot.message_handler(commands=['start'])
